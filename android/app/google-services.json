@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "855913683500",
+    "project_id": "bibliotec-e5d70",
+    "storage_bucket": "bibliotec-e5d70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855913683500:android:9099c89953d87ea3e98f89",
+        "android_client_info": {
+          "package_name": "com.flutterflow.homeU"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855913683500-bhe22tq7jqmj8rdpah9ttijt5qseb12p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLqcJdXV8l-jmvHYth-OoTTtPAY7Kbna4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855913683500-663dcthsrmcpi7ohh39m7j1fklpaoun2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "855913683500-i0patouqus8e5hcplmi0boki5e3du65t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.homeU"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
