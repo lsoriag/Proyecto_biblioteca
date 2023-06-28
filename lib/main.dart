@@ -93,7 +93,9 @@ class _MyAppState extends State<MyApp> {
         GlobalCupertinoLocalizations.delegate,
       ],
       locale: _locale,
-      supportedLocales: const [Locale('en', '')],
+      supportedLocales: const [
+        Locale('es'),
+      ],
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),
       themeMode: _themeMode,
@@ -128,8 +130,6 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'homePage_MAIN': HomePageMAINWidget(),
-      'myTrips': MyTripsWidget(),
-      'chatMain': ChatMainWidget(),
       'profilePage': ProfilePageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -159,26 +159,6 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24.0,
             ),
             label: 'Home',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.format_list_bulleted,
-              size: 24.0,
-            ),
-            label: 'My Trips',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.chat_bubble_outline,
-              size: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.chat_bubble_rounded,
-              size: 24.0,
-            ),
-            label: 'Chats',
             tooltip: '',
           ),
           BottomNavigationBarItem(

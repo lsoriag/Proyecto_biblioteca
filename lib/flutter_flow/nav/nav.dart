@@ -103,96 +103,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : HomePageMAINWidget(),
         ),
         FFRoute(
-          name: 'propertyDetails',
-          path: '/propertyDetails',
-          asyncParams: {
-            'propertyRef':
-                getDoc(['properties'], PropertiesRecord.fromSnapshot),
-          },
-          builder: (context, params) => PropertyDetailsWidget(
-            propertyRef: params.getParam('propertyRef', ParamType.Document),
-          ),
-        ),
-        FFRoute(
-          name: 'searchProperties',
-          path: '/searchProperties',
-          builder: (context, params) => SearchPropertiesWidget(
-            searchTerm: params.getParam('searchTerm', ParamType.String),
-          ),
-        ),
-        FFRoute(
-          name: 'myTrips',
-          path: '/myTrips',
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'myTrips')
-              : MyTripsWidget(),
-        ),
-        FFRoute(
-          name: 'tripDetails',
-          path: '/tripDetails',
-          asyncParams: {
-            'propertyRef':
-                getDoc(['properties'], PropertiesRecord.fromSnapshot),
-            'tripRef': getDoc(['trips'], TripsRecord.fromSnapshot),
-          },
-          builder: (context, params) => TripDetailsWidget(
-            propertyRef: params.getParam('propertyRef', ParamType.Document),
-            tripRef: params.getParam('tripRef', ParamType.Document),
-          ),
-        ),
-        FFRoute(
-          name: 'chatMain',
-          path: '/chatMain',
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'chatMain')
-              : ChatMainWidget(),
-        ),
-        FFRoute(
-          name: 'chatDetails',
-          path: '/chatDetails',
-          asyncParams: {
-            'chatUser': getDoc(['users'], UsersRecord.fromSnapshot),
-          },
-          builder: (context, params) => ChatDetailsWidget(
-            chatUser: params.getParam('chatUser', ParamType.Document),
-            chatRef: params.getParam(
-                'chatRef', ParamType.DocumentReference, false, ['chats']),
-          ),
-        ),
-        FFRoute(
-          name: 'propertyReview',
-          path: '/propertyReview',
-          asyncParams: {
-            'propertyRef':
-                getDoc(['properties'], PropertiesRecord.fromSnapshot),
-          },
-          builder: (context, params) => PropertyReviewWidget(
-            propertyRef: params.getParam('propertyRef', ParamType.Document),
-          ),
-        ),
-        FFRoute(
-          name: 'bookNow',
-          path: '/bookNow',
-          asyncParams: {
-            'propertyDetails':
-                getDoc(['properties'], PropertiesRecord.fromSnapshot),
-          },
-          builder: (context, params) => BookNowWidget(
-            propertyDetails:
-                params.getParam('propertyDetails', ParamType.Document),
-          ),
-        ),
-        FFRoute(
           name: 'profilePage',
           path: '/profilePage',
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'profilePage')
               : ProfilePageWidget(),
-        ),
-        FFRoute(
-          name: 'paymentInfo',
-          path: '/paymentInfo',
-          builder: (context, params) => PaymentInfoWidget(),
         ),
         FFRoute(
           name: 'editProfile',
@@ -215,111 +130,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'createProperty_1',
-          path: '/createProperty1',
-          builder: (context, params) => CreateProperty1Widget(),
-        ),
-        FFRoute(
-          name: 'HomePage_ALT',
-          path: '/homePageALT',
-          builder: (context, params) => HomePageALTWidget(),
-        ),
-        FFRoute(
-          name: 'createProperty_2',
-          path: '/createProperty2',
-          asyncParams: {
-            'propertyRef':
-                getDoc(['properties'], PropertiesRecord.fromSnapshot),
-            'propertyAmenities':
-                getDoc(['amenitities'], AmenititiesRecord.fromSnapshot),
-          },
-          builder: (context, params) => CreateProperty2Widget(
-            propertyRef: params.getParam('propertyRef', ParamType.Document),
-            propertyAmenities:
-                params.getParam('propertyAmenities', ParamType.Document),
-          ),
-        ),
-        FFRoute(
-          name: 'createProperty_3',
-          path: '/createProperty3',
-          asyncParams: {
-            'propertyRef':
-                getDoc(['properties'], PropertiesRecord.fromSnapshot),
-          },
-          builder: (context, params) => CreateProperty3Widget(
-            propertyRef: params.getParam('propertyRef', ParamType.Document),
-          ),
-        ),
-        FFRoute(
-          name: 'myProperties',
-          path: '/myProperties',
-          builder: (context, params) => MyPropertiesWidget(),
-        ),
-        FFRoute(
-          name: 'propertyDetails_Owner',
-          path: '/propertyDetailsOwner',
-          asyncParams: {
-            'propertyRef':
-                getDoc(['properties'], PropertiesRecord.fromSnapshot),
-          },
-          builder: (context, params) => PropertyDetailsOwnerWidget(
-            propertyRef: params.getParam('propertyRef', ParamType.Document),
-          ),
-        ),
-        FFRoute(
-          name: 'myBookings',
-          path: '/myBookings',
-          builder: (context, params) => MyBookingsWidget(),
-        ),
-        FFRoute(
-          name: 'tripDetailsHOST',
-          path: '/tripDetailsHOST',
-          asyncParams: {
-            'propertyRef':
-                getDoc(['properties'], PropertiesRecord.fromSnapshot),
-            'tripRef': getDoc(['trips'], TripsRecord.fromSnapshot),
-          },
-          builder: (context, params) => TripDetailsHOSTWidget(
-            propertyRef: params.getParam('propertyRef', ParamType.Document),
-            tripRef: params.getParam('tripRef', ParamType.Document),
-          ),
-        ),
-        FFRoute(
-          name: 'editProperty_1',
-          path: '/editProperty1',
-          asyncParams: {
-            'propertyRef':
-                getDoc(['properties'], PropertiesRecord.fromSnapshot),
-          },
-          builder: (context, params) => EditProperty1Widget(
-            propertyRef: params.getParam('propertyRef', ParamType.Document),
-          ),
-        ),
-        FFRoute(
-          name: 'editProperty_2',
-          path: '/editProperty2',
-          asyncParams: {
-            'propertyRef':
-                getDoc(['properties'], PropertiesRecord.fromSnapshot),
-            'propertyAmenities':
-                getDoc(['amenitities'], AmenititiesRecord.fromSnapshot),
-          },
-          builder: (context, params) => EditProperty2Widget(
-            propertyRef: params.getParam('propertyRef', ParamType.Document),
-            propertyAmenities:
-                params.getParam('propertyAmenities', ParamType.Document),
-          ),
-        ),
-        FFRoute(
-          name: 'editProperty_3',
-          path: '/editProperty3',
-          asyncParams: {
-            'propertyRef':
-                getDoc(['properties'], PropertiesRecord.fromSnapshot),
-          },
-          builder: (context, params) => EditProperty3Widget(
-            propertyRef: params.getParam('propertyRef', ParamType.Document),
-          ),
+          name: 'lectura1',
+          path: '/lectura1',
+          builder: (context, params) => Lectura1Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -502,8 +315,8 @@ class FFRoute {
               ? Container(
                   color: Colors.transparent,
                   child: Image.asset(
-                    'assets/images/splashScreen@2x.png',
-                    fit: BoxFit.cover,
+                    'assets/images/TIGRILLO_LOAD_3.gif',
+                    fit: BoxFit.contain,
                   ),
                 )
               : page;

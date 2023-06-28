@@ -104,7 +104,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                               if (!(Theme.of(context).brightness ==
                                   Brightness.dark))
                                 Image.asset(
-                                  'assets/images/Logo-Crai-Aprobado-2019-color-1-300x237.png',
+                                  Theme.of(context).brightness ==
+                                          Brightness.dark
+                                      ? 'assets/images/Logo-Crai-Aprobado-2019-color-1-300x237.png'
+                                      : 'assets/images/Logo-Crai-Aprobado-2019-color-1-300x237.png',
                                   width: 350.0,
                                   height: 76.0,
                                   fit: BoxFit.contain,
