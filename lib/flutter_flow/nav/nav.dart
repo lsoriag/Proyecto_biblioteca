@@ -103,13 +103,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : HomePageMAINWidget(),
         ),
         FFRoute(
-          name: 'profilePage',
-          path: '/profilePage',
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'profilePage')
-              : ProfilePageWidget(),
-        ),
-        FFRoute(
           name: 'editProfile',
           path: '/editProfile',
           asyncParams: {
@@ -133,6 +126,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'lectura1',
           path: '/lectura1',
           builder: (context, params) => Lectura1Widget(),
+        ),
+        FFRoute(
+          name: 'profile',
+          path: '/profile',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'profile')
+              : ProfileWidget(),
+        ),
+        FFRoute(
+          name: 'edit',
+          path: '/edit',
+          builder: (context, params) => EditWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -313,7 +318,7 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: Colors.transparent,
+                  color: Colors.white,
                   child: Image.asset(
                     'assets/images/TIGRILLO_LOAD_3.gif',
                     fit: BoxFit.contain,

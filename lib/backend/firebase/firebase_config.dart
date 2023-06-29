@@ -5,13 +5,12 @@ Future initFirebase() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
         options: FirebaseOptions(
-            apiKey: "AIzaSyCJdu0MFpsyYE2oawPMI1xEx8ws__WbAGw",
-            authDomain: "bibliotec-e5d70.firebaseapp.com",
-            projectId: "bibliotec-e5d70",
-            storageBucket: "bibliotec-e5d70.appspot.com",
-            messagingSenderId: "855913683500",
-            appId: "1:855913683500:web:ea3fb36c74da6b1ae98f89",
-            measurementId: "G-P6HL2HNQ4X"));
+            apiKey: "AIzaSyDaIQbgDQUZU-jgtkxLzGSQX8lBOU3lKak",
+            authDomain: "bibliotecasimer.firebaseapp.com",
+            projectId: "bibliotecasimer",
+            storageBucket: "bibliotecasimer.appspot.com",
+            messagingSenderId: "775666598409",
+            appId: "1:775666598409:web:ef93be5162449acd2a6ed8"));
   } else {
     await Firebase.initializeApp();
   }

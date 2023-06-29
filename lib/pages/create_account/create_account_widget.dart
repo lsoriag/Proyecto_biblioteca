@@ -103,10 +103,12 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                               ),
                             if (Theme.of(context).brightness == Brightness.dark)
                               Image.asset(
-                                'assets/images/logoUpHome@3x.png',
-                                width: 200.0,
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? 'assets/images/Logo-Crai-Aprobado-2019-color-1-300x237.png'
+                                    : 'assets/images/Logo-Crai-Aprobado-2019-color-1-300x237.png',
+                                width: 370.0,
                                 height: 60.0,
-                                fit: BoxFit.fitWidth,
+                                fit: BoxFit.contain,
                               ),
                           ],
                         ),
@@ -135,6 +137,22 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                             Expanded(
                               child: TextFormField(
                                 controller: _model.emailAddressController,
+                                onFieldSubmitted: (_) async {
+                                  GoRouter.of(context).prepareAuthEvent();
+
+                                  final user =
+                                      await authManager.signInWithEmail(
+                                    context,
+                                    _model.emailAddressController.text,
+                                    _model.passwordController.text,
+                                  );
+                                  if (user == null) {
+                                    return;
+                                  }
+
+                                  context.goNamedAuth(
+                                      'homePage_MAIN', context.mounted);
+                                },
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelText: 'Correo Electronico',

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>855913683500-i0patouqus8e5hcplmi0boki5e3du65t.apps.googleusercontent.com</string>
+	<string>775666598409-tnpubdtfr2g14h968llvvjq4821qku8a.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.855913683500-i0patouqus8e5hcplmi0boki5e3du65t</string>
+	<string>com.googleusercontent.apps.775666598409-tnpubdtfr2g14h968llvvjq4821qku8a</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAFmhAD66SYOHqUZgpED-tveHCwqdGCvAA</string>
+	<string>AIzaSyDtHd-QBEfjkuZVUxusUD5ACQ_coSDwFqs</string>
 	<key>GCM_SENDER_ID</key>
-	<string>855913683500</string>
+	<string>775666598409</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.flutterflow.homeU</string>
 	<key>PROJECT_ID</key>
-	<string>bibliotec-e5d70</string>
+	<string>bibliotecasimer</string>
 	<key>STORAGE_BUCKET</key>
-	<string>bibliotec-e5d70.appspot.com</string>
+	<string>bibliotecasimer.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:855913683500:ios:68dee9ff0d0c172de98f89</string>
+	<string>1:775666598409:ios:c91ba0beb9858ada2a6ed8</string>
 </dict>
 </plist>

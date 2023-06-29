@@ -50,8 +50,6 @@ class _MyAppState extends State<MyApp> {
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
 
-  final authUserSub = authenticatedUserStream.listen((_) {});
-
   @override
   void initState() {
     super.initState();
@@ -64,13 +62,6 @@ class _MyAppState extends State<MyApp> {
       Duration(seconds: 1),
       () => _appStateNotifier.stopShowingSplashImage(),
     );
-  }
-
-  @override
-  void dispose() {
-    authUserSub.cancel();
-
-    super.dispose();
   }
 
   void setLocale(String language) {
@@ -130,7 +121,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'homePage_MAIN': HomePageMAINWidget(),
-      'profilePage': ProfilePageWidget(),
+      'profile': ProfileWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -163,14 +154,10 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.account_circle_outlined,
+              Icons.location_history,
               size: 24.0,
             ),
-            activeIcon: Icon(
-              Icons.account_circle,
-              size: 24.0,
-            ),
-            label: 'Profile',
+            label: '',
             tooltip: '',
           )
         ],
