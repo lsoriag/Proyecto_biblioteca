@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:collection/collection.dart';
+
 import '/backend/schema/util/firestore_util.dart';
 import '/backend/schema/util/schema_util.dart';
 
@@ -195,4 +197,53 @@ Map<String, dynamic> createPropertiesRecordData({
   );
 
   return firestoreData;
+}
+
+class PropertiesRecordDocumentEquality implements Equality<PropertiesRecord> {
+  const PropertiesRecordDocumentEquality();
+
+  @override
+  bool equals(PropertiesRecord? e1, PropertiesRecord? e2) {
+    return e1?.propertyName == e2?.propertyName &&
+        e1?.propertyDescription == e2?.propertyDescription &&
+        e1?.mainImage == e2?.mainImage &&
+        e1?.propertyLocation == e2?.propertyLocation &&
+        e1?.propertyAddress == e2?.propertyAddress &&
+        e1?.isDraft == e2?.isDraft &&
+        e1?.userRef == e2?.userRef &&
+        e1?.propertyNeighborhood == e2?.propertyNeighborhood &&
+        e1?.ratingSummary == e2?.ratingSummary &&
+        e1?.price == e2?.price &&
+        e1?.taxRate == e2?.taxRate &&
+        e1?.cleaningFee == e2?.cleaningFee &&
+        e1?.notes == e2?.notes &&
+        e1?.minNightStay == e2?.minNightStay &&
+        e1?.lastUpdated == e2?.lastUpdated &&
+        e1?.minNights == e2?.minNights &&
+        e1?.isLive == e2?.isLive;
+  }
+
+  @override
+  int hash(PropertiesRecord? e) => const ListEquality().hash([
+        e?.propertyName,
+        e?.propertyDescription,
+        e?.mainImage,
+        e?.propertyLocation,
+        e?.propertyAddress,
+        e?.isDraft,
+        e?.userRef,
+        e?.propertyNeighborhood,
+        e?.ratingSummary,
+        e?.price,
+        e?.taxRate,
+        e?.cleaningFee,
+        e?.notes,
+        e?.minNightStay,
+        e?.lastUpdated,
+        e?.minNights,
+        e?.isLive
+      ]);
+
+  @override
+  bool isValidKey(Object? o) => o is PropertiesRecord;
 }

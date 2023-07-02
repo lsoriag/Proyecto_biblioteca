@@ -10,3 +10,6 @@ export '/pages/change_password/change_password_widget.dart'
 export '/pages/lectura1/lectura1_widget.dart' show Lectura1Widget;
 export '/pages/profile/profile_widget.dart' show ProfileWidget;
 export '/pages/edit/edit_widget.dart' show EditWidget;
+export '/pages/lectura2/lectura2_widget.dart' show Lectura2Widget;
+export '/pages/password/password_widget.dart' show PasswordWidget;
+export '/pages/lectura3/lectura3_widget.dart' show Lectura3Widget;

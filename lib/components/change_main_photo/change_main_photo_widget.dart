@@ -205,6 +205,7 @@ class _ChangeMainPhotoWidgetState extends State<ChangeMainPhotoWidget>
                             validateFileFormat(m.storagePath, context))) {
                       setState(() => _model.isDataUploading = true);
                       var selectedUploadedFiles = <FFUploadedFile>[];
+
                       var downloadUrls = <String>[];
                       try {
                         showUploadMessage(

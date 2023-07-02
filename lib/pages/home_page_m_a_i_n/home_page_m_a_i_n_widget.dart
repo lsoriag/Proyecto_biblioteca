@@ -297,6 +297,176 @@ class _HomePageMAINWidgetState extends State<HomePageMAINWidget> {
               borderRadius: BorderRadius.circular(8.0),
             ),
           ),
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 8.0),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  '   ',
+                  style: FlutterFlowTheme.of(context).displaySmall.override(
+                        fontFamily: 'Urbanist',
+                        color: FlutterFlowTheme.of(context).tertiary,
+                      ),
+                ),
+              ],
+            ),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Text(
+                'Libro de Psicología',
+                textAlign: TextAlign.center,
+                style: FlutterFlowTheme.of(context).titleLarge,
+              ),
+            ],
+          ),
+          Slidable(
+            endActionPane: ActionPane(
+              motion: const ScrollMotion(),
+              extentRatio: 0.25,
+              children: [
+                SlidableAction(
+                  label: 'Share',
+                  backgroundColor: FlutterFlowTheme.of(context).info,
+                  icon: Icons.share,
+                  onPressed: (_) {
+                    print('SlidableActionWidget pressed ...');
+                  },
+                ),
+              ],
+            ),
+            child: ListTile(
+              title: Text(
+                'LAS 48 LEYES DEL PODER',
+                style: FlutterFlowTheme.of(context).titleLarge,
+              ),
+              subtitle: Text(
+                'psicología y manipulacion',
+                style: FlutterFlowTheme.of(context).labelMedium,
+              ),
+              tileColor: FlutterFlowTheme.of(context).secondaryBackground,
+              dense: false,
+            ),
+          ),
+          FFButtonWidget(
+            onPressed: () async {
+              context.pushNamed('lectura2');
+            },
+            text: 'Leer',
+            options: FFButtonOptions(
+              width: double.infinity,
+              height: 40.0,
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+              color: Colors.white,
+              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                    fontFamily: 'Urbanist',
+                    color: Colors.black,
+                  ),
+              elevation: 3.0,
+              borderSide: BorderSide(
+                color: Colors.transparent,
+                width: 1.0,
+              ),
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 8.0),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  '   ',
+                  style: FlutterFlowTheme.of(context).displaySmall.override(
+                        fontFamily: 'Urbanist',
+                        color: FlutterFlowTheme.of(context).tertiary,
+                      ),
+                ),
+              ],
+            ),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Text(
+                'Libro de Historia',
+                textAlign: TextAlign.center,
+                style: FlutterFlowTheme.of(context).titleLarge,
+              ),
+            ],
+          ),
+          Slidable(
+            endActionPane: ActionPane(
+              motion: const ScrollMotion(),
+              extentRatio: 0.25,
+              children: [
+                SlidableAction(
+                  label: 'Share',
+                  backgroundColor: FlutterFlowTheme.of(context).info,
+                  icon: Icons.share,
+                  onPressed: (_) {
+                    print('SlidableActionWidget pressed ...');
+                  },
+                ),
+              ],
+            ),
+            child: ListTile(
+              title: Text(
+                'UNEMI Y SU HISTORIA',
+                style: FlutterFlowTheme.of(context).titleLarge,
+              ),
+              subtitle: Text(
+                'relato con bases reales',
+                style: FlutterFlowTheme.of(context).labelMedium,
+              ),
+              tileColor: FlutterFlowTheme.of(context).secondaryBackground,
+              dense: false,
+            ),
+          ),
+          FFButtonWidget(
+            onPressed: () async {
+              context.pushNamed('lectura3');
+            },
+            text: 'Leer',
+            options: FFButtonOptions(
+              width: double.infinity,
+              height: 40.0,
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+              color: Colors.white,
+              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                    fontFamily: 'Urbanist',
+                    color: Colors.black,
+                  ),
+              elevation: 3.0,
+              borderSide: BorderSide(
+                color: Colors.transparent,
+                width: 1.0,
+              ),
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 8.0),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  '   ',
+                  style: FlutterFlowTheme.of(context).displaySmall.override(
+                        fontFamily: 'Urbanist',
+                        color: FlutterFlowTheme.of(context).tertiary,
+                      ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

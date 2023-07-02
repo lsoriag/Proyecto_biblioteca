@@ -127,7 +127,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         context: context,
                         builder: (context) {
                           return Padding(
-                            padding: MediaQuery.of(context).viewInsets,
+                            padding: MediaQuery.viewInsetsOf(context),
                             child: Container(
                               height: 470.0,
                               child: ChangePhotoWidget(),

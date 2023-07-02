@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:collection/collection.dart';
+
 import '/backend/schema/util/firestore_util.dart';
 import '/backend/schema/util/schema_util.dart';
 
@@ -178,4 +180,49 @@ Map<String, dynamic> createTripsRecordData({
   );
 
   return firestoreData;
+}
+
+class TripsRecordDocumentEquality implements Equality<TripsRecord> {
+  const TripsRecordDocumentEquality();
+
+  @override
+  bool equals(TripsRecord? e1, TripsRecord? e2) {
+    return e1?.propertyRef == e2?.propertyRef &&
+        e1?.userRef == e2?.userRef &&
+        e1?.tripBeginDate == e2?.tripBeginDate &&
+        e1?.tripEndDate == e2?.tripEndDate &&
+        e1?.tripCost == e2?.tripCost &&
+        e1?.guests == e2?.guests &&
+        e1?.paymentMethod == e2?.paymentMethod &&
+        e1?.tripCreated == e2?.tripCreated &&
+        e1?.host == e2?.host &&
+        e1?.cancelTrip == e2?.cancelTrip &&
+        e1?.cancelReason == e2?.cancelReason &&
+        e1?.tripTotal == e2?.tripTotal &&
+        e1?.upcoming == e2?.upcoming &&
+        e1?.complete == e2?.complete &&
+        e1?.rated == e2?.rated;
+  }
+
+  @override
+  int hash(TripsRecord? e) => const ListEquality().hash([
+        e?.propertyRef,
+        e?.userRef,
+        e?.tripBeginDate,
+        e?.tripEndDate,
+        e?.tripCost,
+        e?.guests,
+        e?.paymentMethod,
+        e?.tripCreated,
+        e?.host,
+        e?.cancelTrip,
+        e?.cancelReason,
+        e?.tripTotal,
+        e?.upcoming,
+        e?.complete,
+        e?.rated
+      ]);
+
+  @override
+  bool isValidKey(Object? o) => o is TripsRecord;
 }

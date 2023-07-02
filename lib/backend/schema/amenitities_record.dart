@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:collection/collection.dart';
+
 import '/backend/schema/util/firestore_util.dart';
 import '/backend/schema/util/schema_util.dart';
 
@@ -155,4 +157,43 @@ Map<String, dynamic> createAmenititiesRecordData({
   );
 
   return firestoreData;
+}
+
+class AmenititiesRecordDocumentEquality implements Equality<AmenititiesRecord> {
+  const AmenititiesRecordDocumentEquality();
+
+  @override
+  bool equals(AmenititiesRecord? e1, AmenititiesRecord? e2) {
+    return e1?.ac == e2?.ac &&
+        e1?.heater == e2?.heater &&
+        e1?.pool == e2?.pool &&
+        e1?.dogFriendly == e2?.dogFriendly &&
+        e1?.washer == e2?.washer &&
+        e1?.dryer == e2?.dryer &&
+        e1?.workout == e2?.workout &&
+        e1?.hip == e2?.hip &&
+        e1?.nightLife == e2?.nightLife &&
+        e1?.propertyRef == e2?.propertyRef &&
+        e1?.extraOutlets == e2?.extraOutlets &&
+        e1?.evCharger == e2?.evCharger;
+  }
+
+  @override
+  int hash(AmenititiesRecord? e) => const ListEquality().hash([
+        e?.ac,
+        e?.heater,
+        e?.pool,
+        e?.dogFriendly,
+        e?.washer,
+        e?.dryer,
+        e?.workout,
+        e?.hip,
+        e?.nightLife,
+        e?.propertyRef,
+        e?.extraOutlets,
+        e?.evCharger
+      ]);
+
+  @override
+  bool isValidKey(Object? o) => o is AmenititiesRecord;
 }

@@ -88,7 +88,7 @@ class _EditWidgetState extends State<EditWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 0.0, 0.0),
               child: Container(
-                width: MediaQuery.of(context).size.width * 1.0,
+                width: MediaQuery.sizeOf(context).width * 1.0,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   boxShadow: [
@@ -122,7 +122,7 @@ class _EditWidgetState extends State<EditWidget> {
                                   child: Image.network(
                                     'https://images.unsplash.com/photo-1626544827763-d516dce335e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc1fHxwcm9kdWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
                                     width:
-                                        MediaQuery.of(context).size.width * 1.0,
+                                        MediaQuery.sizeOf(context).width * 1.0,
                                     height: 130.0,
                                     fit: BoxFit.cover,
                                   ),
@@ -131,7 +131,7 @@ class _EditWidgetState extends State<EditWidget> {
                                   alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Container(
                                     width:
-                                        MediaQuery.of(context).size.width * 1.0,
+                                        MediaQuery.sizeOf(context).width * 1.0,
                                     height: 130.0,
                                     decoration: BoxDecoration(
                                       color: Color(0x77090F13),
@@ -202,7 +202,7 @@ class _EditWidgetState extends State<EditWidget> {
                               context: context,
                               builder: (context) {
                                 return Padding(
-                                  padding: MediaQuery.of(context).viewInsets,
+                                  padding: MediaQuery.viewInsetsOf(context),
                                   child: ChangePhotoWidget(),
                                 );
                               },

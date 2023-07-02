@@ -43,7 +43,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
         mainAxisSize: MainAxisSize.max,
         children: [
           Container(
-            width: MediaQuery.of(context).size.width * 1.0,
+            width: MediaQuery.sizeOf(context).width * 1.0,
             height: 160.0,
             decoration: BoxDecoration(
               color: Color(0xFF4B39EF),
@@ -210,9 +210,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     onTap: () async {
-                      context.pushNamed('changePassword');
-
-                      context.pushNamed('changePassword');
+                      context.pushNamed('password');
                     },
                     child: Row(
                       mainAxisSize: MainAxisSize.max,

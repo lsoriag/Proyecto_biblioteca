@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:collection/collection.dart';
+
 import '/backend/schema/util/firestore_util.dart';
 import '/backend/schema/util/schema_util.dart';
 
@@ -99,4 +101,29 @@ Map<String, dynamic> createReviewsRecordData({
   );
 
   return firestoreData;
+}
+
+class ReviewsRecordDocumentEquality implements Equality<ReviewsRecord> {
+  const ReviewsRecordDocumentEquality();
+
+  @override
+  bool equals(ReviewsRecord? e1, ReviewsRecord? e2) {
+    return e1?.propertyRef == e2?.propertyRef &&
+        e1?.userRef == e2?.userRef &&
+        e1?.rating == e2?.rating &&
+        e1?.ratingDescription == e2?.ratingDescription &&
+        e1?.ratingCreated == e2?.ratingCreated;
+  }
+
+  @override
+  int hash(ReviewsRecord? e) => const ListEquality().hash([
+        e?.propertyRef,
+        e?.userRef,
+        e?.rating,
+        e?.ratingDescription,
+        e?.ratingCreated
+      ]);
+
+  @override
+  bool isValidKey(Object? o) => o is ReviewsRecord;
 }

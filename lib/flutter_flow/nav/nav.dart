@@ -138,6 +138,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'edit',
           path: '/edit',
           builder: (context, params) => EditWidget(),
+        ),
+        FFRoute(
+          name: 'lectura2',
+          path: '/lectura2',
+          builder: (context, params) => Lectura2Widget(),
+        ),
+        FFRoute(
+          name: 'password',
+          path: '/password',
+          builder: (context, params) => PasswordWidget(),
+        ),
+        FFRoute(
+          name: 'lectura3',
+          path: '/lectura3',
+          builder: (context, params) => Lectura3Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
