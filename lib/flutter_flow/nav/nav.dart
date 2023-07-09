@@ -148,11 +148,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'password',
           path: '/password',
           builder: (context, params) => PasswordWidget(),
-        ),
-        FFRoute(
-          name: 'lectura3',
-          path: '/lectura3',
-          builder: (context, params) => Lectura3Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

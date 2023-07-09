@@ -1,4 +1,4 @@
-package com.flutterflow.homeU
+package com.flutterflo.simerplay
 
 import io.flutter.embedding.android.FlutterActivity
 
