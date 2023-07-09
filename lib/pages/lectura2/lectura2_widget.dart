@@ -58,7 +58,8 @@ class _Lectura2WidgetState extends State<Lectura2Widget> {
               color: FlutterFlowTheme.of(context).secondaryBackground,
             ),
             child: FlutterFlowPdfViewer(
-              assetPath: 'assets/pdfs/[PD]_Libros_-_48_leyes_del_Poder.pdf',
+              networkPath:
+                  'https://www.elmayorportaldegerencia.com/Libros/Mercadeo/%5BPD%5D%20Libros%20-%2048%20leyes%20del%20Poder.pdf',
               height: 300.0,
               horizontalScroll: false,
             ),

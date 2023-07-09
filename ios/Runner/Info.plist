@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>simerplay</string>
+	<string>PROYECTO</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -28,7 +28,7 @@
             <string>Editor</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>com.googleusercontent.apps.775666598409-7pcnitk1fu19n9muvgmbjcoq8fjv6r32</string>
+                <string>com.googleusercontent.apps.775666598409-tnpubdtfr2g14h968llvvjq4821qku8a</string>
                 
             </array>
         </dict>

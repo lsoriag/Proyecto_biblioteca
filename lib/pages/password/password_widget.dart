@@ -124,7 +124,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 4.0, 4.0),
                     child: Text(
-                      'Le enviaremos un correo electrónico con un enlace para restablecer su contraseña, ingrese el correo electrónico asociado con su cuenta a continuación.',
+                      'We will send you an email with a link to reset your password, please enter the email associated with your account below.',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
                             fontFamily: 'Outfit',
                             color: Color(0xFF57636C),

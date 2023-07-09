@@ -210,7 +210,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     onTap: () async {
-                      context.pushNamed('password');
+                      context.pushNamed('changePassword');
                     },
                     child: Row(
                       mainAxisSize: MainAxisSize.max,

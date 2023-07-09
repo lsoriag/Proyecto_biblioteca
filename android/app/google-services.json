@@ -7,50 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:775666598409:android:1190cff5bd96abad2a6ed8",
-        "android_client_info": {
-          "package_name": "com.flutterflo.simerplay"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "775666598409-usntn3045jtt11ma39m3b63dpd04nmer.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.flutterflo.simerplay",
-            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
-          }
-        },
-        {
-          "client_id": "775666598409-jh3guan93ofje00l71ugdqbpj61ihpta.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCOcitDei7n1lFbhrP0K_yB9xytKtxRuew"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "775666598409-jh3guan93ofje00l71ugdqbpj61ihpta.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "775666598409-7pcnitk1fu19n9muvgmbjcoq8fjv6r32.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.flutterflo.simerplay"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:775666598409:android:04c9045a499d192f2a6ed8",
         "android_client_info": {
           "package_name": "com.flutterflow.homeU"
@@ -75,10 +31,10 @@
               "client_type": 3
             },
             {
-              "client_id": "775666598409-7pcnitk1fu19n9muvgmbjcoq8fjv6r32.apps.googleusercontent.com",
+              "client_id": "775666598409-tnpubdtfr2g14h968llvvjq4821qku8a.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.flutterflo.simerplay"
+                "bundle_id": "com.flutterflow.homeU"
               }
             }
           ]
